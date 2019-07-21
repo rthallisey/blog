@@ -1,6 +1,6 @@
 # Hugo variables
 #
-baseurl = "https://rthallisey.github.io/"
+baseurl = "https://rthallisey.netlify.com/"
 languageCode = "en-us"
 title = "Ryan Hallisey's Blog"
 theme = "aether"
