@@ -1,9 +1,9 @@
 # Hugo variables
 #
-baseurl = "https://rthallisey.io/"
+baseurl = "https://rthallisey.github.io/"
 languageCode = "en-us"
 title = "Ryan Hallisey's Blog"
-theme = "hugo-theme-bootstrap4-blog"
+theme = "aether"
 # number of posts to show on home/category/tag pages (Default: 10)
 paginate = 5
 # optionally override the site's footer with custom copyright text
