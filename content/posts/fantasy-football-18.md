@@ -24,11 +24,11 @@ Total bench points seems like a pointful statistic because it can be interpreted
 as "the amount of points I didn't take advantage of" or "I could've won that game
 if I only had 10 more points week 3".  Hindsight is 20/20.
 
-<iframe src="http://localhost:1313/html/total-bench-points.html" width="750" height="500" frameborder="0"></iframe>
+<iframe src="http://rthallisey.netify.com/posts/total-bench-points.html" width="750" height="500" frameborder="0"></iframe>
 
 Maybe it will be more interesting if we graph bench points against wins.
 
-<iframe src="http://localhost:1313/html/total-bench-points-vs-wins.html" width="750" height="500" frameborder="0"></iframe>
+<iframe src="http://rthallisey.netify.com/posts/total-bench-points-vs-wins.html" width="750" height="500" frameborder="0"></iframe>
 
 Two playoff teams finished in the top 5 for total bench points. Winning teams
 usually score the most, but winning teams also prevent other teams from scoring
@@ -60,7 +60,7 @@ We'll first look at a team's average most valuable players, which is the average
 number of MVPs a team had per win.  Think of this statistic as the number of
 players it took on average for a team to get a win.
 
-<iframe src="http://localhost:1313/html/avg-mvps.html" width="750" height="500" frameborder="0"></iframe>
+<iframe src="http://rthallisey.netify.com/posts/avg-mvps.html" width="750" height="500" frameborder="0"></iframe>
 
 Not bad!  Except, this doesn't perfectly satisfy the statistic of "who worked
 the hardest for a win".  To prove this let's look at a corner case.  If a team
@@ -83,7 +83,7 @@ Randall Cobb, Josh Allen, Jordan Howard to win one week and Russel Wilson,
 David Johnson, and Zay Jones the next.
 
 Here's a look at MVP count.
-<iframe src="http://localhost:1313/html/unique-mvps.html" width="750" height="500" frameborder="0"></iframe>
+<iframe src="http://rthallisey.netify.com/posts/unique-mvps.html" width="750" height="500" frameborder="0"></iframe>
 
 Now let's incororate MVP count into our equation:
 ```
@@ -113,7 +113,7 @@ Sixteen wins with unqiue players every week!:
 ```
 And here's the final graph:
 
-<iframe src="http://localhost:1313/html/normalized-mvps.html" width="750" height="500" frameborder="0"></iframe>
+<iframe src="http://rthallisey.netify.com/posts/normalized-mvps.html" width="750" height="500" frameborder="0"></iframe>
 
 Not surprisingly the top 4 finishers had the four highest score.  What's
 interesting is the teams that jumped rank.  Me (Ryan) finished 4th and had
@@ -125,7 +125,7 @@ Math's the math.  Don't hate the player hate the numbers.
 It's always interesting to learn what player got you the most wins in a season
 because it's usually not who you think...
 
-<iframe src="http://localhost:1313/html/team-mvp.html" width="750" height="500" frameborder="0"></iframe>
+<iframe src="http://rthallisey.netify.com/posts/team-mvp.html" width="750" height="500" frameborder="0"></iframe>
 
 Da Bears!
 
@@ -134,7 +134,7 @@ As the sun sets on Standard Scoring in the league, let's look at each team's
 average score per position.  Keep in mind that average score is
 `points-scored/games-played`, so injuries don't deflate position averages.
 
-<iframe src="http://localhost:1313/html/avg-pts-per-position.html" width="750" height="500" frameborder="0"></iframe>
+<iframe src="http://rthallisey.netify.com/posts/avg-pts-per-position.html" width="750" height="500" frameborder="0"></iframe>
 
 ## Now it starts all over again in 2019
 Good luck on the 2019 season!
