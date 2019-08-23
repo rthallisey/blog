@@ -25,13 +25,13 @@ if I only had 10 more points week 3".  Hindsight is 20/20.
 
 <iframe src="http://localhost:1313/html/total-bench-points.html" width="750" height="500" frameborder="0"></iframe>
 
-The most interesting thing about total bench points is when it's graphed against
-total wins.
+Maybe it will be more interesting if we graph bench points against wins.
 
 <iframe src="http://localhost:1313/html/total-bench-points-vs-wins.html" width="750" height="500" frameborder="0"></iframe>
 
-Interesting, winning teams usually score the most, but winning teams also prevent
-other teams from scoring on them by keeping a strong bench.
+Two playoff teams finished in the top 5 for total bench points. Winning teams
+usually score the most, but winning teams also prevent other teams from scoring
+on them by keeping a strong bench.
 
 ## Can I Buy a Win?
 Wins are hard to come by in a competitive FFL, so you always need
@@ -97,14 +97,19 @@ mvpSum + count - record.Wins
 OK this looks better, so let's test the corner cases...
 
 One win with 9 MVPs:
+```
 9 + 9 - 1 = 17
+```
 
 Sixteen wins with 1 MVP:
+```
 16 + 1 - 16 = 1
+```
 
 Sixteen wins with unqiue players every week!:
+```
 144 + 144 - 16 = 272
-
+```
 And here's the final graph:
 
 <iframe src="http://localhost:1313/html/normalized-mvps.html" width="750" height="500" frameborder="0"></iframe>
@@ -124,10 +129,9 @@ because it's usually not who you think...
 Da Bears!
 
 ## On to Half Point PPR
-As the sun sets on Standard Scoring in my league, let's look at how each team's
-average score per position matched up agaist the overall average score per
-position.  Keep in mind that average score is points-scored/games-played so
-injuries don't deflate position averages.
+As the sun sets on Standard Scoring in the league, let's look at each team's
+average score per position.  Keep in mind that average score is
+`points-scored/games-played`, so injuries don't deflate position averages.
 
 <iframe src="http://localhost:1313/html/avg-pts-per-position.html" width="750" height="500" frameborder="0"></iframe>
 
