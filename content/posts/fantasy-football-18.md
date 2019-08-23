@@ -1,7 +1,8 @@
 ---
 title: "Fantasy Football 18"
 date: 2019-08-18T11:57:40-04:00
-draft: true
+draft: false
+tags: ["markdown", "GitHub", "website"]
 ---
 
 # Fantasy Football 2018 Season
