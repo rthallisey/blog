@@ -3,17 +3,48 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://rthallisey.netlify.com/categories/</loc>
+    <loc>https://rthallisey.netlify.com/posts/fantasy-football-18/</loc>
+    <lastmod>2019-08-18T11:57:40-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://rthallisey.netlify.com/tags/github/</loc>
+    <lastmod>2019-08-18T11:57:40-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://rthallisey.netlify.com/posts/</loc>
+    <lastmod>2019-08-18T11:57:40-04:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://rthallisey.netlify.com/</loc>
+    <lastmod>2019-08-18T11:57:40-04:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://rthallisey.netlify.com/tags/</loc>
+    <lastmod>2019-08-18T11:57:40-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://rthallisey.netlify.com/tags/markdown/</loc>
+    <lastmod>2019-08-18T11:57:40-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://rthallisey.netlify.com/tags/website/</loc>
+    <lastmod>2019-08-18T11:57:40-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://rthallisey.netlify.com/categories/</loc>
     <priority>0</priority>
   </url>
   

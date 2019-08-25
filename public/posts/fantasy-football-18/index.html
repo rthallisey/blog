@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Fantasy Football 18 &middot; Ryan Hallisey&#39;s Blog</title>
+  <meta name="description" content="" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+  
+  
+  
+  
+  <link href="https://rthallisey.netlify.com/css/concated.min.css" rel="stylesheet">
+  
+  
+</head>
+
+  <body class="single-body">
+    <nav class="nav-bar side-padding">
+  <h1 class="nav-header"><a href="https://rthallisey.netlify.com/" class="nav-text">Ryan Hallisey&#39;s Blog</a></h1>
+  <div class="hamburger-menu">
+    <button onclick="hamburgerMenuPressed.call(this)" aria-haspopup="true" aria-expanded="false" aria-controls="menu" aria-label="Menu">
+      <span></span>
+      <span></span>
+    </button>
+    <ul id="menu" class="hamburger-menu-overlay">
+      <li><a href="https://rthallisey.netlify.com/" class="hamburger-menu-overlay-link">Home</a></li>
+      
+      
+    </ul>
+  </div>
+</nav>
+
+    <main class="content side-text-padding">
+      <article class="post dropcase">
+        <header class="post-header">
+        	<h1 class="post-title">Fantasy Football 18</h1>
+          <p class="post-date">Posted <time datetime="2019-08-18">Aug 18, 2019</time></p>
+        </header>
+        
+        
+
+<h1 id="fantasy-football-2018-season">Fantasy Football 2018 Season</h1>
+
+<p>Fantasy Football statistics is getting an upgrade in 2019 as I was finally
+able to my <a href="https://github.com/rthallisey/espn-go-api">library</a> functional for
+anazlying the ESPN Fantasy leagues after ESPN started to overhaul their API at
+the end of 2018.</p>
+
+<h2 id="summary-of-2018">Summary of 2018</h2>
+
+<p>2018 was another great FF season as the League saw it&rsquo;s second two time winner,
+David H, blow everyone away in the regular season with exceptional drafting.
+Here are some records David set in 2018 in the modern era of scoring (2015-2018):
+  * Most points 1547.2 - that&rsquo;s an average of 110.5 points per game.
+  * 3rd regular season title, winning the title in 2011, 2015, and now 2018
+  * Most wins in a season with 12.</p>
+
+<h2 id="total-bench-points">Total Bench Points</h2>
+
+<p>Total bench points seems like a pointful statistic because it can be interpreted
+as &ldquo;the amount of points I didn&rsquo;t take advantage of&rdquo; or &ldquo;I could&rsquo;ve won that game
+if I only had 10 more points week 3&rdquo;.  Hindsight is <sup>20</sup>&frasl;<sub>20</sub>.</p>
+
+<iframe src="https://rthallisey.netify.com/html/total-bench-points.html" width="750" height="500" frameborder="0"></iframe>
+
+<p>Maybe it will be more interesting if we graph bench points against wins.</p>
+
+<iframe src="https://rthallisey.netify.com/html/total-bench-points-vs-wins.html" width="750" height="500" frameborder="0"></iframe>
+
+<p>Two playoff teams finished in the top 5 for total bench points. Winning teams
+usually score the most, but winning teams also prevent other teams from scoring
+on them by keeping a strong bench.</p>
+
+<h2 id="can-i-buy-a-win">Can I Buy a Win?</h2>
+
+<p>Wins are hard to come by in a competitive FFL, so you always need
+to try and find your edge.  Like most people, I like to look back at the
+previous week and think about how I could&rsquo;ve been better. Should I have
+picked up a rookie running back or a veteran wide receiver?  How can I
+be more efficient using waivers? With the 2018 seaosn in the past, I want to do
+the same retrospective analysis over a full season to see if it can bring a
+different perspective.  I want to find which owner worked to the hardest to get
+a win and maybe I can learn something.</p>
+
+<p>Working the hardest for a win means that the team had to rely on a large
+number of players to get wins and was successful at it.  In otherwords, Todd
+Gurley didn&rsquo;t win the owner every game &ndash; the owner had to go out find waiver
+picks, trades, and one week streamers to score points when it counted and won
+a lot.</p>
+
+<p>The stat I use to track individual players contributing to a win I called the
+most valueable player (MVP). The most valuable player is a player that in a
+given week scores more points than&hellip;
+  - the difference of the winning team&rsquo;s score
+  - the average player at the position</p>
+
+<p>We&rsquo;ll first look at a team&rsquo;s average most valuable players, which is the average
+number of MVPs a team had per win.  Think of this statistic as the number of
+players it took on average for a team to get a win.</p>
+
+<iframe src="https://rthallisey.netify.com/html/avg-mvps.html" width="750" height="500" frameborder="0"></iframe>
+
+<p>Not bad!  Except, this doesn&rsquo;t perfectly satisfy the statistic of &ldquo;who worked
+the hardest for a win&rdquo;.  To prove this let&rsquo;s look at a corner case.  If a team
+wins 1 game and every player on their team contributed to the win, then that
+team would have an average of 12 MVPs per win.  12 MVPs for one win is impressive,
+however I&rsquo;m more interested in wins.</p>
+
+<p>Let&rsquo;s include wins into the equation because the weight of each win makes
+it harder to have more MVPs. Here&rsquo;s the resulting equation:</p>
+
+<pre><code>(mvpSum/record.Wins)*record.Wins
+</code></pre>
+
+<p>A little better, but record.Wins has a lot of weight and this doesn&rsquo;t take into
+account the amount of unique players a team had to use to win.  For example, I
+could get 8 wins with Todd Gurley, Tyreek Hill, and Pat Malholmes winning me
+every game.  But that shouldn&rsquo;t count more than a team with 8 wins having to use
+Randall Cobb, Josh Allen, Jordan Howard to win one week and Russel Wilson,
+David Johnson, and Zay Jones the next.</p>
+
+<p>Here&rsquo;s a look at MVP count.
+<iframe src="https://rthallisey.netify.com/html/unique-mvps.html" width="750" height="500" frameborder="0"></iframe></p>
+
+<p>Now let&rsquo;s incororate MVP count into our equation:</p>
+
+<pre><code>(mvpSum/record.Wins)*record.Wins + count - record.Wins
+</code></pre>
+
+<p>This reduces down to:</p>
+
+<pre><code>mvpSum + count - record.Wins
+</code></pre>
+
+<p>OK this looks better, so let&rsquo;s test the corner cases&hellip;</p>
+
+<p>One win with 9 MVPs:</p>
+
+<pre><code>9 + 9 - 1 = 17
+</code></pre>
+
+<p>Sixteen wins with 1 MVP:</p>
+
+<pre><code>16 + 1 - 16 = 1
+</code></pre>
+
+<p>Sixteen wins with unqiue players every week!:</p>
+
+<pre><code>144 + 144 - 16 = 272
+</code></pre>
+
+<p>And here&rsquo;s the final graph:</p>
+
+<iframe src="https://rthallisey.netify.com/html/normalized-mvps.html" width="750" height="500" frameborder="0"></iframe>
+
+<p>Not surprisingly the top 4 finishers had the four highest score.  What&rsquo;s
+interesting is the teams that jumped rank.  Me (Ryan) finished 4th and had
+the highest score.  John had the second highest score and finished 3rd.</p>
+
+<p>Math&rsquo;s the math.  Don&rsquo;t hate the player hate the numbers.</p>
+
+<h2 id="team-most-valuable-player">Team Most Valuable Player</h2>
+
+<p>It&rsquo;s always interesting to learn what player got you the most wins in a season
+because it&rsquo;s usually not who you think&hellip;</p>
+
+<iframe src="https://rthallisey.netify.com/html/team-mvp.html" width="750" height="500" frameborder="0"></iframe>
+
+<p>Da Bears!</p>
+
+<h2 id="on-to-half-point-ppr">On to Half Point PPR</h2>
+
+<p>As the sun sets on Standard Scoring in the league, let&rsquo;s look at each team&rsquo;s
+average score per position.  Keep in mind that average score is
+<code>points-scored/games-played</code>, so injuries don&rsquo;t deflate position averages.</p>
+
+<iframe src="https://rthallisey.netify.com/html/avg-pts-per-position.html" width="750" height="500" frameborder="0"></iframe>
+
+<h2 id="now-it-starts-all-over-again-in-2019">Now it starts all over again in 2019</h2>
+
+<p>Good luck on the 2019 season!</p>
+
+<iframe src="https://free.timeanddate.com/countdown/i6wawlfd/n859/cf100/cm0/cu4/ct0/cs0/ca0/co1/cr0/ss0/cac000/cpc000/pc777/tc66c/fn3/fs130/szw576/szh243/tatDays%20left%20until%20Football%20starts/tac000/tpc000/iso2019-09-05T20:20:00/bo2" allowTransparency="true" frameborder="0" width="750" height="300"></iframe>
+
+      </article>
+      
+    </main>
+    <nav class="end-nav side-padding">
+      
+      <a ontouchstart="cardPressed.call(this)" ontouchend="cardReleased.call(this)" ontouchmove="cardReleased.call(this)" 
+  href="https://rthallisey.netlify.com/" class="card home-card" style="background-image: url( https://rthallisey.netlify.com/img/grey-cloud.jpg )" rel="bookmark" >
+  Home
+</a>
+    </nav>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/highlight.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"
+    onload="renderMathInElement(document.body);"></script>
+  
+  <script src="https://rthallisey.netlify.com/js/core.min.js"></script>
+<script>
+  hljs.initHighlightingOnLoad();
+</script>
+
+  </body>
+</html>

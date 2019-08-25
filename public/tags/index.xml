@@ -5,9 +5,31 @@
     <description>Recent content in Tags on Ryan Hallisey&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <lastBuildDate>Sun, 18 Aug 2019 11:57:40 -0400</lastBuildDate>
     
         <atom:link href="https://rthallisey.netlify.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
-    
+    <item>
+      <title>GitHub</title>
+      <link>https://rthallisey.netlify.com/tags/github/</link>
+      <pubDate>Sun, 18 Aug 2019 11:57:40 -0400</pubDate>
+      
+      <guid>https://rthallisey.netlify.com/tags/github/</guid>
+      <description></description>
+    </item><item>
+      <title>markdown</title>
+      <link>https://rthallisey.netlify.com/tags/markdown/</link>
+      <pubDate>Sun, 18 Aug 2019 11:57:40 -0400</pubDate>
+      
+      <guid>https://rthallisey.netlify.com/tags/markdown/</guid>
+      <description></description>
+    </item><item>
+      <title>website</title>
+      <link>https://rthallisey.netlify.com/tags/website/</link>
+      <pubDate>Sun, 18 Aug 2019 11:57:40 -0400</pubDate>
+      
+      <guid>https://rthallisey.netlify.com/tags/website/</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>
