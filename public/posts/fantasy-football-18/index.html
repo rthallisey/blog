@@ -44,9 +44,9 @@
 
 <h1 id="fantasy-football-2018-season">Fantasy Football 2018 Season</h1>
 
-<p>Fantasy Football statistics is getting an upgrade in 2019 as I was finally
-able to my <a href="https://github.com/rthallisey/espn-go-api">library</a> functional for
-anazlying the ESPN Fantasy leagues after ESPN started to overhaul their API at
+<p>Fantasy Football statistics is getting an upgrade in 2019! I was finally
+able to get my <a href="https://github.com/rthallisey/espn-go-api">library</a> functional for
+analyzing the ESPN Fantasy leagues after ESPN started to overhaul their API at
 the end of 2018.</p>
 
 <h2 id="summary-of-2018">Summary of 2018</h2>
@@ -80,30 +80,33 @@ on them by keeping a strong bench.</p>
 to try and find your edge.  Like most people, I like to look back at the
 previous week and think about how I could&rsquo;ve been better. Should I have
 picked up a rookie running back or a veteran wide receiver?  How can I
-be more efficient using waivers? With the 2018 seaosn in the past, I want to do
-the same retrospective analysis over a full season to see if it can bring a
-different perspective.  I want to find which owner worked to the hardest to get
-a win and maybe I can learn something.</p>
+be more efficient using waivers? How can I better fill a gap this injury left
+behind?</p>
+
+<p>The best place to start looking for improvements is to understand which team
+had to work harder for their wins. Working harder implies that regardless of how
+you draft, you manage your team well.  Good team management leads to more wins
+and more championships.  So let&rsquo;s see which team worked the hardest to get a win.</p>
 
 <p>Working the hardest for a win means that the team had to rely on a large
-number of players to get wins and was successful at it.  In otherwords, Todd
+number of players to get wins and was successful at it.  In other words, Todd
 Gurley didn&rsquo;t win the owner every game &ndash; the owner had to go out find waiver
-picks, trades, and one week streamers to score points when it counted and won
-a lot.</p>
+picks, trades, and one week streamers to score points when it counted.</p>
 
-<p>The stat I use to track individual players contributing to a win I called the
-most valueable player (MVP). The most valuable player is a player that in a
+<p>The stat I used to track individual players contributing to a win is called the
+most valuable player (MVP). The most valuable player is a player that in a
 given week scores more points than&hellip;
   - the difference of the winning team&rsquo;s score
   - the average player at the position</p>
 
-<p>We&rsquo;ll first look at a team&rsquo;s average most valuable players, which is the average
-number of MVPs a team had per win.  Think of this statistic as the number of
-players it took on average for a team to get a win.</p>
+<p>To get to which team worked the hardest, we&rsquo;ll first look at a team&rsquo;s average
+most valuable players, which is the average number of MVPs a team had per win.
+Think of this statistic as the number of players it took on average for a team
+to get a win.</p>
 
 <iframe src="/html/avg-mvps.html" width="750" height="500" frameborder="0"></iframe>
 
-<p>Not bad!  Except, this doesn&rsquo;t perfectly satisfy the statistic of &ldquo;who worked
+<p>Not bad! Except, this doesn&rsquo;t perfectly satisfy the statistic of &ldquo;who worked
 the hardest for a win&rdquo;.  To prove this let&rsquo;s look at a corner case.  If a team
 wins 1 game and every player on their team contributed to the win, then that
 team would have an average of 12 MVPs per win.  12 MVPs for one win is impressive,
@@ -122,17 +125,17 @@ every game.  But that shouldn&rsquo;t count more than a team with 8 wins having 
 Randall Cobb, Josh Allen, Jordan Howard to win one week and Russel Wilson,
 David Johnson, and Zay Jones the next.</p>
 
-<p>Here&rsquo;s a look at MVP count.
+<p>Here&rsquo;s a look at the number of unique MVPs per team:
 <iframe src="/html/unique-mvps.html" width="750" height="500" frameborder="0"></iframe></p>
 
-<p>Now let&rsquo;s incororate MVP count into our equation:</p>
+<p>Now let&rsquo;s incorporate the MVP count into our equation:</p>
 
-<pre><code>(mvpSum/record.Wins)*record.Wins + count - record.Wins
+<pre><code>(mvpSum/record.Wins)*record.Wins + MVPcount - record.Wins
 </code></pre>
 
 <p>This reduces down to:</p>
 
-<pre><code>mvpSum + count - record.Wins
+<pre><code>mvpSum + MVPcount - record.Wins
 </code></pre>
 
 <p>OK this looks better, so let&rsquo;s test the corner cases&hellip;</p>
@@ -147,29 +150,38 @@ David Johnson, and Zay Jones the next.</p>
 <pre><code>16 + 1 - 16 = 1
 </code></pre>
 
-<p>Sixteen wins with unqiue players every week!:</p>
+<p>Sixteen wins with unique players every week! (This the highest score a team can
+get):</p>
 
 <pre><code>144 + 144 - 16 = 272
 </code></pre>
 
-<p>And here&rsquo;s the final graph:</p>
+<p>On a scale of 1 to 272, here&rsquo;s how hard it was for each team to win games:</p>
 
 <iframe src="/html/normalized-mvps.html" width="750" height="500" frameborder="0"></iframe>
 
-<p>Not surprisingly the top 4 finishers had the four highest score.  What&rsquo;s
-interesting is the teams that jumped rank.  Me (Ryan) finished 4th and had
-the highest score.  John had the second highest score and finished 3rd.</p>
-
-<p>Math&rsquo;s the math.  Don&rsquo;t hate the player hate the numbers.</p>
+<p>Not surprisingly the top 4 finishers had the four highest scores.  But, what&rsquo;s
+really interesting are the teams that had uncharacteristic scores relative to
+their win totals.  Dan M (7 wins), posts a score of 4 with one less win than
+Ryan (8 wins) who has a score of 36. Scrolling up to the Unique MVPs shows
+Dan M with 5 and Ryan with 12.  Dan M there&rsquo;s some room for growth.  If you
+had hit more winners in the waiver wire you probably would&rsquo;ve 8 or 9 wins and
+made the playoffs.</p>
 
 <h2 id="team-most-valuable-player">Team Most Valuable Player</h2>
 
-<p>It&rsquo;s always interesting to learn what player got you the most wins in a season
-because it&rsquo;s usually not who you think&hellip;</p>
+<p>It&rsquo;s always interesting to learn what player got you the most wins and points in
+a season because it&rsquo;s usually not who you think&hellip;</p>
 
-<iframe src="/html/team-mvp.html" width="750" height="500" frameborder="0"></iframe>
+<iframe src="/html/team-mvp-points.html" width="750" height="500" frameborder="0"></iframe>
 
-<p>Da Bears!</p>
+<iframe src="/html/mvps-by-wins.html" width="750" height="500" frameborder="0"></iframe>
+
+<p>Here are some observations:
+* The top two finishers had QBs win them 6 games
+* The most common position from the top MVPs were Running Backs with <sup>9</sup>&frasl;<sub>24</sub>
+* <sup>1</sup>&frasl;<sub>24</sub> of the top MVPs was a Kicker, Ka&rsquo;imi Farbarirn
+* Defense may not win you championships, but it can win you 4 games. Thanks Bears D/ST.</p>
 
 <h2 id="on-to-half-point-ppr">On to Half Point PPR</h2>
 
@@ -177,7 +189,20 @@ because it&rsquo;s usually not who you think&hellip;</p>
 average score per position.  Keep in mind that average score is
 <code>points-scored/games-played</code>, so injuries don&rsquo;t deflate position averages.</p>
 
-<iframe src="/html/avg-pts-per-position.html" width="750" height="500" frameborder="0"></iframe>
+<iframe src="/html/team-pts-per-position.html" width="750" height="500" frameborder="0"></iframe>
+
+<p>The &lsquo;Average&rsquo; line shows the position average, so it&rsquo;s not surprising teams
+are well over the RB and WR avg because in our league you can play 2 or 3.
+* WR average points: 7.8565824848762364
+* RB average points: 8.07453195497313
+* QB average points: 17.73205642228142
+* TE average points: 5.978830544455545
+* K average points: 7.86362543012543
+* DEF average points: 5.997916666666667</p>
+
+<p>What&rsquo;s funny is Chris B is playing 2 or 3 WRs per week and actually had less
+then the single WR average, 7.85, with 7.36 points per week.  Maybe you should
+get to waiver wire Chris&hellip;</p>
 
 <h2 id="now-it-starts-all-over-again-in-2019">Now it starts all over again in 2019</h2>
 
