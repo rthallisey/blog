@@ -15,9 +15,10 @@ the end of 2018.
 2018 was another great FF season as the League saw it's second two time winner,
 David H, blow everyone away in the regular season with exceptional drafting.
 Here are some records David set in 2018 in the modern era of scoring (2015-2018):
-  * Most points 1547.2 - that's an average of 110.5 points per game.
-  * 3rd regular season title, winning the title in 2011, 2015, and now 2018
-  * Most wins in a season with 12.
+
+- Most points 1547.2 - that's an average of 110.5 points per game.
+- 3rd regular season title, winning the title in 2011, 2015, and now 2018
+- Most wins in a season with 12.
 
 ## Total Bench Points
 Total bench points seems like a pointful statistic because it can be interpreted
@@ -137,10 +138,11 @@ a season because it's usually not who you think...
 <iframe src="/html/mvps-by-wins.html" width="750" height="500" frameborder="0"></iframe>
 
 Here are some observations:
-* The top two finishers had QBs win them 6 games
-* The most common position from the top MVPs were Running Backs with 9/24
-* 1/24 of the top MVPs was a Kicker, Ka'imi Farbarirn
-* Defense may not win you championships, but it can win you 4 games. Thanks Bears D/ST.
+
+- The top two finishers had QBs win them 6 games
+- The most common position from the top MVPs were Running Backs with 9/24
+- 1/24 of the top MVPs was a Kicker, Ka'imi Farbarirn
+- Defense may not win you championships, but it can win you 4 games. Thanks Bears D/ST.
 
 ## On to Half Point PPR
 As the sun sets on Standard Scoring in the league, let's look at each team's
@@ -151,12 +153,13 @@ average score per position.  Keep in mind that average score is
 
 The 'Average' line shows the position average, so it's not surprising teams
 are well over the RB and WR avg because in our league you can play 2 or 3.
-* WR average points: 7.8565824848762364
-* RB average points: 8.07453195497313
-* QB average points: 17.73205642228142
-* TE average points: 5.978830544455545
-* K average points: 7.86362543012543
-* DEF average points: 5.997916666666667
+
+- WR average points: 7.8565824848762364
+- RB average points: 8.07453195497313
+- QB average points: 17.73205642228142
+- TE average points: 5.978830544455545
+- K average points: 7.86362543012543
+- DEF average points: 5.997916666666667
 
 What's funny is Chris B is playing 2 or 3 WRs per week and actually had less
 then the single WR average, 7.85, with 7.36 points per week.  Maybe you should
